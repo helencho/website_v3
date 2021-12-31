@@ -37,7 +37,10 @@
 .link_home {
   &:hover,
   &:focus {
-    border-color: $color-secondary;
+    border-top-color: $color-tertiary;
+    border-right-color: $color-tertiary;
+    border-bottom-color: $color-secondary;
+    border-left-color: $color-secondary;
   }
 }
 
@@ -45,8 +48,8 @@
   &:hover,
   &:focus-within {
     .link {
+      border-top-color: $color-tertiary;
       border-left-color: $color-secondary;
-      border-top-color: $color-secondary;
     }
   }
 }
@@ -64,7 +67,7 @@
   &:hover,
   &:focus-within {
     .link {
-      border-right-color: $color-secondary;
+      border-right-color: $color-tertiary;
       border-bottom-color: $color-secondary;
     }
   }
