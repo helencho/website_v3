@@ -29,14 +29,12 @@ const Nav = () => {
 
   const router = useRouter();
 
-  const createLetterSpans = (word) => {
-    // Randomly choose a letter a highlight
-    const highightIndex = Math.floor(Math.random() * word.length);
-    return word.split('').map(
+  const createLetterSpans = (word, place) =>
+    word.split('').map(
       (letter, index) => (
         <span
           className={classNames({
-            [styles.letter_highlight]: highightIndex === index,
+            [styles.letter_highlight]: place === index,
           })}
           key={`${word}_${index}_${letter}`}
         >
@@ -45,12 +43,11 @@ const Nav = () => {
       ),
       [],
     );
-  };
 
   return (
     <nav className={styles.nav}>
       <ul className={styles.list}>
-        {ITEMS.map((item) => {
+        {ITEMS.map((item, index) => {
           const linkClasses = classNames({
             [styles.link]: true,
             [styles.link_active]: router.asPath === item.href,
@@ -59,7 +56,9 @@ const Nav = () => {
           return (
             <li className={styles.item} key={item.text}>
               <Link href={item.href}>
-                <a className={linkClasses}>{createLetterSpans(item.text)}</a>
+                <a className={linkClasses}>
+                  {createLetterSpans(item.text, index)}
+                </a>
               </Link>
             </li>
           );
