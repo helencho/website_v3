@@ -1,40 +1,47 @@
 @import 'styles/variables.module.scss';
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 24px;
   max-width: 1440px;
 }
 
 .list {
-  list-style: none;
-  padding: 0;
   display: flex;
   justify-content: flex-end;
+  list-style: none;
   margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 .item {
   margin-right: 24px;
+
+  &:first-child {
+    left: 0;
+    margin-right: 0;
+    position: absolute;
+  }
+
   &:last-child {
     margin-right: 0;
   }
 }
 
 .link {
-  text-transform: uppercase;
-  font-weight: 500;
-  display: block;
-  outline: none;
-  font-size: 24px;
   border: 4px solid;
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+  outline: none;
   padding: 4px 10px;
-  transition: border-color 0.2s linear;
+  text-transform: uppercase;
+  transition: border-left-color 0.15s linear, border-top-color 0.15s linear 0.1s,
+    border-right-color 0.15s linear 0.2s, border-bottom-color 0.15s linear 0.3s;
 }
 
-.link_home {
+.link_home,
+.link {
   &:hover,
   &:focus {
     border-top-color: $color-tertiary;
@@ -44,31 +51,10 @@
   }
 }
 
-.item:nth-of-type(1) {
-  &:hover,
-  &:focus-within {
-    .link {
-      border-top-color: $color-tertiary;
-      border-left-color: $color-secondary;
-    }
-  }
-}
-
-.item:nth-of-type(2) {
-  &:hover,
-  &:focus-within {
-    .link {
-      border-bottom-color: $color-secondary;
-    }
-  }
-}
-
-.item:nth-of-type(3) {
-  &:hover,
-  &:focus-within {
-    .link {
-      border-right-color: $color-tertiary;
-      border-bottom-color: $color-secondary;
-    }
-  }
+.link_active {
+  color: $color-secondary;
+  border-top-color: $color-tertiary;
+  border-right-color: $color-tertiary;
+  border-bottom-color: $color-secondary;
+  border-left-color: $color-secondary;
 }
