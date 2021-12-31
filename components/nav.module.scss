@@ -38,10 +38,7 @@
   text-transform: uppercase;
   transition: border-left-color 0.15s linear, border-top-color 0.15s linear 0.1s,
     border-right-color 0.15s linear 0.2s, border-bottom-color 0.15s linear 0.3s;
-}
 
-.link_home,
-.link {
   &:hover,
   &:focus {
     border-top-color: $color-tertiary;
@@ -52,9 +49,12 @@
 }
 
 .link_active {
-  color: $color-secondary;
   border-top-color: $color-tertiary;
   border-right-color: $color-tertiary;
   border-bottom-color: $color-secondary;
   border-left-color: $color-secondary;
+
+  .letter_highlight {
+    color: $color-secondary;
+  }
 }
