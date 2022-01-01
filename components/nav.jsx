@@ -24,25 +24,26 @@ const ITEMS = [
   },
 ];
 
-const Nav = () => {
-  // TODO: When using mouseclick, do not apply focus colors
+const VOWELS = 'aeiou';
 
+const Nav = () => {
   const router = useRouter();
 
-  const createLetterSpans = (word, place) =>
-    word.split('').map(
-      (letter, index) => (
+  const createLetterSpans = (word) =>
+    word.split('').map((letter, index) => {
+      const key = `${word}_${index}_${letter}`;
+      const isVowel = VOWELS.includes(letter.toLowerCase());
+      return (
         <span
           className={classNames({
-            [styles.letter_highlight]: place === index,
+            [styles.letter_highlight]: isVowel,
           })}
-          key={`${word}_${index}_${letter}`}
+          key={key}
         >
           {letter}
         </span>
-      ),
-      [],
-    );
+      );
+    }, []);
 
   return (
     <nav className={styles.nav}>
@@ -56,9 +57,7 @@ const Nav = () => {
           return (
             <li className={styles.item} key={item.text}>
               <Link href={item.href}>
-                <a className={linkClasses}>
-                  {createLetterSpans(item.text, index)}
-                </a>
+                <a className={linkClasses}>{createLetterSpans(item.text)}</a>
               </Link>
             </li>
           );

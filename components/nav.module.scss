@@ -41,7 +41,7 @@
     border-right-color 0.15s linear 0.2s, border-bottom-color 0.15s linear 0.3s;
 
   &:hover,
-  &:focus {
+  &:focus:focus-visible {
     border-top-color: $color-tertiary;
     border-right-color: $color-tertiary;
     border-bottom-color: $color-secondary;
@@ -50,11 +50,6 @@
 }
 
 .link_active {
-  border-top-color: $color-tertiary;
-  border-right-color: $color-tertiary;
-  border-bottom-color: $color-secondary;
-  border-left-color: $color-secondary;
-
   .letter_highlight {
     color: $color-secondary;
   }
