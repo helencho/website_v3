@@ -1,6 +1,7 @@
 @import 'styles/variables.module.scss';
 
 .nav {
+  height: $nav-height;
   padding: 24px;
   max-width: 1440px;
 }
