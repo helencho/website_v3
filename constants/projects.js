@@ -106,28 +106,6 @@ export const PROJECTS = [
     },
   },
   {
-    title: 'Madlify',
-    subTitle: 'Mad Libs inspired phrasal template word game.',
-    description:
-      'A colorful Mad Libs inspired phrasal template word game that prompts users for a list of words to be substituted for blanks in a story.',
-    technologies: [TECH.REACT, TECH.CSS3],
-    ctas: [
-      {
-        text: 'Live',
-        href: 'https://madlify.netlify.com/',
-      },
-      {
-        text: 'Source',
-        href: 'https://github.com/helencho/madlify',
-      },
-    ],
-    image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
-    },
-  },
-
-  {
     title: 'Website',
     subTitle: 'The first ever personal website.',
     description: '',
@@ -165,61 +143,6 @@ export const PROJECTS = [
     },
   },
   {
-    title: 'Connect Four',
-    subTitle: 'Connect four to win.',
-    description:
-      "It's a game from my (and possibly your) childhood. Unlike traditional Connect Four games, the pieces are black and white. Take turns playing with a friend. I built this to prepare for interviews, practice my algorithms, and familiarize myself with matrices.",
-    technologies: [TECH.REACT, TECH.CSS3],
-    ctas: [
-      {
-        text: 'Live',
-        href: 'https://cccc.netlify.com/',
-      },
-      {
-        text: 'Source',
-        href: 'https://github.com/helencho/connectFour',
-      },
-    ],
-    image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
-    },
-  },
-  {
-    title: 'Sinistagram',
-    subTitle: 'Instagram inspired photo-sharing platform for the sinister.',
-    description:
-      "A photo-sharing platform that looks eerily similar to Instagram. Interacts with a RESTful API to fetch data that populates the feed, user profiles, and allows users to publish posts. Sign up if you're evil.",
-    technologies: [TECH.NODE, TECH.REACT, TECH.POSTGRES, TECH.CSS3],
-    ctas: [
-      {
-        text: 'Source',
-        href: 'https://github.com/helencho/sinistagram',
-      },
-    ],
-    image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
-    },
-  },
-  {
-    title: 'Sh*t Peter Says',
-    subTitle: 'Farewell gift to the instructor.',
-    description:
-      'My full stack web development instructor said the darnest things. My fellows and I built a website that randomly generates those darn things he said.',
-    technologies: [TECH.JS, TECH.HTML, TECH.CSS3],
-    ctas: [
-      {
-        text: 'Source',
-        href: 'https://github.com/helencho/wisdom-generator',
-      },
-    ],
-    image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
-    },
-  },
-  {
     title: 'Snake',
     subTitle: "Eat food. Grow. Don't crash.",
     description:
@@ -241,19 +164,19 @@ export const PROJECTS = [
     },
   },
   {
-    title: 'Concentration',
-    subTitle: 'Memory matching game.',
+    title: 'Connect Four',
+    subTitle: 'Connect four to win.',
     description:
-      'A memory matching game where a user must flip over the same cards in pairs to win.',
+      "It's a game from my (and possibly your) childhood. Unlike traditional Connect Four games, the pieces are black and white. Take turns playing with a friend. I built this to prepare for interviews, practice my algorithms, and familiarize myself with matrices.",
     technologies: [TECH.REACT, TECH.CSS3],
     ctas: [
       {
         text: 'Live',
-        href: 'https://concentration.netlify.com/',
+        href: 'https://cccc.netlify.com/',
       },
       {
         text: 'Source',
-        href: 'https://github.com/helencho/concentration',
+        href: 'https://github.com/helencho/connectFour',
       },
     ],
     image: {
@@ -262,18 +185,15 @@ export const PROJECTS = [
     },
   },
   {
-    title: 'Calculator',
-    subTitle: 'Google Pixel inspired calculator.',
-    description: "It's a calculator but it looks like a Google calculator.",
-    technologies: [TECH.REACT, TECH.CSS3],
+    title: 'Sh*t Peter Says',
+    subTitle: 'Farewell gift to the instructor.',
+    description:
+      'My full stack web development instructor said the darnest things. My fellows and I built a website that randomly generates those darn things he said.',
+    technologies: [TECH.JS, TECH.HTML, TECH.CSS3],
     ctas: [
       {
-        text: 'Live',
-        href: 'https://react-calculator.netlify.com/',
-      },
-      {
         text: 'Source',
-        href: 'https://github.com/helencho/react-calculator',
+        href: 'https://github.com/helencho/wisdom-generator',
       },
     ],
     image: {

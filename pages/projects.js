@@ -20,13 +20,7 @@ const Project = (props) => {
   return (
     <div className={styles.projectContainer}>
       <div className={styles.imageContainer}>
-        <Image
-          // loader={myLoader}
-          src={src}
-          alt={alt}
-          width="380px"
-          height="280px"
-        />
+        <Image alt={alt} height="280px" src={src} width="380px" />
       </div>
       <div className={styles.textContainer}>
         <h2>{title}</h2>
@@ -38,10 +32,10 @@ const Project = (props) => {
             return (
               <div className={styles.logo} key={logo.alt}>
                 <Image
-                  src={logo.src}
                   alt={logo.alt}
-                  width="50px"
                   height="50px"
+                  src={logo.src}
+                  width="50px"
                 />
               </div>
             );
