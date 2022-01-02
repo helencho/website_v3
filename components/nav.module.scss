@@ -40,6 +40,8 @@
   transition: border-left-color 0.15s linear, border-top-color 0.15s linear 0.1s,
     border-right-color 0.15s linear 0.2s, border-bottom-color 0.15s linear 0.3s;
 
+  // TODO: hover/focus doesn't work in Safari. Won't fix.
+
   &:hover,
   &:focus:focus-visible {
     border-top-color: $color-tertiary;

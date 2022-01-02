@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+import { snakeCase } from 'helpers/normalizers';
+
 import styles from './nav.module.scss';
 
 const ITEMS = [
@@ -26,42 +28,51 @@ const ITEMS = [
 
 const VOWELS = 'aeiou';
 
+const createLetterSpans = (word) =>
+  word.split('').map((letter, index) => {
+    const key = `${word}_${index}_${letter}`;
+    const isVowel = VOWELS.includes(letter.toLowerCase());
+    return (
+      <span
+        className={classNames({
+          [styles.letter_highlight]: isVowel,
+        })}
+        key={key}
+      >
+        {letter}
+      </span>
+    );
+  }, []);
+
+const NavLink = (props) => {
+  const { asPath, href, text } = props;
+  const linkClasses = classNames({
+    [styles.link]: true,
+    [styles.link_active]: asPath === href,
+  });
+
+  return (
+    <li className={styles.item}>
+      <Link href={href}>
+        <a className={linkClasses}>{createLetterSpans(text)}</a>
+      </Link>
+    </li>
+  );
+};
+
 const Nav = () => {
   const router = useRouter();
-
-  const createLetterSpans = (word) =>
-    word.split('').map((letter, index) => {
-      const key = `${word}_${index}_${letter}`;
-      const isVowel = VOWELS.includes(letter.toLowerCase());
-      return (
-        <span
-          className={classNames({
-            [styles.letter_highlight]: isVowel,
-          })}
-          key={key}
-        >
-          {letter}
-        </span>
-      );
-    }, []);
 
   return (
     <nav className={styles.nav}>
       <ul className={styles.list}>
-        {ITEMS.map((item, index) => {
-          const linkClasses = classNames({
-            [styles.link]: true,
-            [styles.link_active]: router.asPath === item.href,
-          });
-
-          return (
-            <li className={styles.item} key={item.text}>
-              <Link href={item.href}>
-                <a className={linkClasses}>{createLetterSpans(item.text)}</a>
-              </Link>
-            </li>
-          );
-        })}
+        {ITEMS.map((item) => (
+          <NavLink
+            asPath={router.asPath}
+            key={snakeCase(item.text)}
+            {...item}
+          />
+        ))}
       </ul>
     </nav>
   );
