@@ -67,7 +67,6 @@ const Projects = (props) => {
         <h1 className={styles.title}>Projects</h1>
         <p className={styles.subTitle}>
           At the intersection of <span>time</span> and <span>inspiration</span>.
-          Small passion/hobby projects.
         </p>
         {props.projects.map((project) => (
           <Project key={snakeCase(project.title)} {...project} />
