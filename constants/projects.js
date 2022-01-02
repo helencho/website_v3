@@ -14,7 +14,7 @@ export const PROJECTS = [
       },
     ],
     image: {
-      alt: 'Placeholder for image description',
+      alt: 'Placeholder for screenshot image',
       src: '/images/rectangle.png',
     },
   },
@@ -31,8 +31,8 @@ export const PROJECTS = [
       },
     ],
     image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
+      alt: 'Screenshot of live website',
+      src: '/images/projects/WebsiteV2.svg',
     },
   },
   {
@@ -52,8 +52,8 @@ export const PROJECTS = [
       },
     ],
     image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
+      alt: 'Screenshot of live website',
+      src: '/images/projects/Smood.svg',
     },
   },
   {
@@ -80,8 +80,8 @@ export const PROJECTS = [
       },
     ],
     image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
+      alt: 'Screenshot of live website',
+      src: '/images/projects/Elevate.svg',
     },
   },
   {
@@ -101,14 +101,15 @@ export const PROJECTS = [
       },
     ],
     image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
+      alt: 'Screenshot of live website',
+      src: '/images/projects/Leafbit.svg',
     },
   },
   {
     title: 'Website',
-    subTitle: 'The first ever personal website.',
-    description: '',
+    subTitle: 'The birth of helencho.io.',
+    description:
+      "POV: You're a coding bootcamp grad and looking for ways to break into the market.",
     technologies: [TECH.REACT, TECH.CSS3],
     ctas: [
       {
@@ -117,8 +118,8 @@ export const PROJECTS = [
       },
     ],
     image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
+      alt: 'Screenshot of live website',
+      src: '/images/projects/WebsiteV1.svg',
     },
   },
   {
@@ -138,8 +139,8 @@ export const PROJECTS = [
       },
     ],
     image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
+      alt: 'Screenshot of live website',
+      src: '/images/projects/TrainMe.svg',
     },
   },
   {
@@ -159,8 +160,8 @@ export const PROJECTS = [
       },
     ],
     image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
+      alt: 'Screenshot of live website',
+      src: '/images/projects/Snake.svg',
     },
   },
   {
@@ -180,8 +181,8 @@ export const PROJECTS = [
       },
     ],
     image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
+      alt: 'Screenshot of live website',
+      src: '/images/projects/ConnectFour.svg',
     },
   },
   {
@@ -197,8 +198,8 @@ export const PROJECTS = [
       },
     ],
     image: {
-      alt: 'Placeholder for image description',
-      src: '/images/rectangle.png',
+      alt: 'Screenshot of live website',
+      src: '/images/projects/Peter.svg',
     },
   },
 ];

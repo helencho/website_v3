@@ -20,7 +20,7 @@ const Project = (props) => {
   return (
     <div className={styles.projectContainer}>
       <div className={styles.imageContainer}>
-        <Image alt={alt} height="280px" src={src} width="380px" />
+        <Image alt={alt} height="231px" src={src} width="366px" />
       </div>
       <div className={styles.textContainer}>
         <h2>{title}</h2>
