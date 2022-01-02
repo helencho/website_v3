@@ -1,0 +1,88 @@
+@import 'styles/variables.module.scss';
+
+// Projects
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.subTitle {
+  font-size: 40px;
+  padding-bottom: 48px;
+
+  > span {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 50%,
+      $color-saffron 50%
+    );
+  }
+}
+
+// Project
+.projectContainer {
+  display: flex;
+  margin-bottom: 48px;
+
+  // Alternate image and text every other project
+  &:nth-of-type(2n) {
+    flex-direction: row-reverse;
+
+    .textContainer {
+      padding-left: 0;
+      padding-right: 48px;
+    }
+  }
+
+  // Alternate image background color every 3 images
+  &:nth-of-type(3n + 1) {
+    .imageContainer {
+      background-color: $color-green-blue-crayola;
+    }
+  }
+  &:nth-of-type(3n + 2) {
+    .imageContainer {
+      background-color: $color-asparagus;
+    }
+  }
+  &:nth-of-type(3n + 3) {
+    .imageContainer {
+      background-color: $color-saffron;
+    }
+  }
+}
+
+.imageContainer {
+  align-items: center;
+  display: flex;
+  height: 396px;
+  justify-content: center;
+  width: 456px;
+}
+
+.textContainer {
+  padding-left: 48px;
+  width: 684px;
+}
+
+.projectSubTitle {
+  font-weight: 400;
+  text-transform: none;
+}
+
+.description {
+  padding: 24px 0;
+}
+
+.techContainer {
+  display: flex;
+  padding-bottom: 24px;
+}
+
+.logo {
+  margin-right: 12px;
+}
