@@ -4,8 +4,19 @@ import Image from 'next/image';
 import ButtonLink from 'components/buttonLink';
 import { PROJECTS } from 'constants/projects';
 import { TECH_LOGO_MAP } from 'constants/technology';
+import { snakeCase } from 'helpers/normalizers';
 
 import styles from './projects.module.scss';
+
+const TechLogo = ({ technology }) => {
+  const logo = TECH_LOGO_MAP[technology];
+
+  return (
+    <div className={styles.logo} key={logo.alt}>
+      <Image alt={logo.alt} height="50px" src={logo.src} width="50px" />
+    </div>
+  );
+};
 
 const Project = (props) => {
   const {
@@ -17,6 +28,8 @@ const Project = (props) => {
     image: { alt, src },
   } = props;
 
+  const titleSnakeCase = snakeCase(title);
+
   return (
     <div className={styles.projectContainer}>
       <div className={styles.imageContainer}>
@@ -27,22 +40,15 @@ const Project = (props) => {
         <h3 className={styles.projectSubTitle}>{subTitle}</h3>
         <p className={styles.description}>{description}</p>
         <div className={styles.techContainer}>
-          {technologies.map((technology) => {
-            const logo = TECH_LOGO_MAP[technology];
-            return (
-              <div className={styles.logo} key={logo.alt}>
-                <Image
-                  alt={logo.alt}
-                  height="50px"
-                  src={logo.src}
-                  width="50px"
-                />
-              </div>
-            );
-          })}
+          {technologies.map((technology) => (
+            <TechLogo
+              key={`${titleSnakeCase}_tech_${technology.toLowerCase()}`}
+              technology={technology}
+            />
+          ))}
         </div>
         {ctas.map((cta, index) => (
-          <ButtonLink key={`${title}_cta_${index}`} {...cta} />
+          <ButtonLink key={`${titleSnakeCase}_cta_${index}`} {...cta} />
         ))}
       </div>
     </div>
@@ -64,7 +70,7 @@ const Projects = (props) => {
           Small passion/hobby projects.
         </p>
         {props.projects.map((project) => (
-          <Project key={project.title} {...project} />
+          <Project key={snakeCase(project.title)} {...project} />
         ))}
       </div>
     </>
