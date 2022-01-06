@@ -3,20 +3,10 @@ import Image from 'next/image';
 
 import ButtonLink from 'components/buttonLink';
 import { PROJECTS } from 'constants/projects';
-import { TECH_LOGO_MAP } from 'constants/technology';
+import TechLogo from 'components/techLogo';
 import { snakeCase } from 'helpers/normalizers';
 
 import styles from './projects.module.scss';
-
-const TechLogo = ({ technology }) => {
-  const logo = TECH_LOGO_MAP[technology];
-
-  return (
-    <div className={styles.logo} key={logo.alt}>
-      <Image alt={logo.alt} height="50px" src={logo.src} width="50px" />
-    </div>
-  );
-};
 
 const Project = (props) => {
   const {
@@ -42,8 +32,11 @@ const Project = (props) => {
         <div className={styles.techContainer}>
           {technologies.map((technology) => (
             <TechLogo
+              className={styles.logo}
+              height="50px"
               key={`${titleSnakeCase}_tech_${technology.toLowerCase()}`}
               technology={technology}
+              width="50px"
             />
           ))}
         </div>

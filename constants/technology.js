@@ -1,13 +1,17 @@
 // TODO: Alphabetize or order in some way
 export const TECH = {
+  BQ: 'BQ',
   CANVAS: 'CANVAS',
   CSS3: 'CSS3',
   FITBIT: 'FITBIT',
+  FLASK: 'FLASK',
   HTML: 'HTML',
   JS: 'JS',
+  MYSQL: 'MYSQL',
   NEXT: 'NEXT',
   NODE: 'NODE',
   POSTGRES: 'POSTGRES',
+  PYTHON: 'PYTHON',
   REACT: 'REACT',
   REDUX: 'REDUX',
   S3: 'S3',
@@ -16,6 +20,10 @@ export const TECH = {
 };
 
 export const TECH_LOGO_MAP = {
+  [TECH.BQ]: {
+    src: '',
+    alt: 'BigQuery',
+  },
   [TECH.CANVAS]: {
     src: '/images/html.svg',
     alt: 'HTML',
@@ -28,6 +36,10 @@ export const TECH_LOGO_MAP = {
     src: '/images/fitbit.png',
     alt: 'Fitbit SDK',
   },
+  [TECH.FLASK]: {
+    src: '',
+    alt: 'Flask framework',
+  },
   [TECH.HTML]: {
     src: '/images/html.svg',
     alt: 'HTML',
@@ -36,9 +48,13 @@ export const TECH_LOGO_MAP = {
     src: '/images/javascript.svg',
     alt: 'JavaScript',
   },
+  [TECH.MYSQL]: {
+    src: '',
+    alt: 'MySQL',
+  },
   [TECH.NEXT]: {
     src: '/images/nextjs.svg',
-    alt: 'Next.j',
+    alt: 'Next.js',
   },
   [TECH.NODE]: {
     src: '/images/nodejs.svg',
@@ -47,6 +63,10 @@ export const TECH_LOGO_MAP = {
   [TECH.POSTGRES]: {
     src: '/images/postgres.svg',
     alt: 'PostgreSQL',
+  },
+  [TECH.PYTHON]: {
+    src: '',
+    alt: 'Python',
   },
   [TECH.REACT]: {
     src: '/images/react.svg',

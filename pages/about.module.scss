@@ -1,0 +1,145 @@
+@import 'styles/variables.module.scss';
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  text-align: center;
+}
+
+.title {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.subTitle {
+  font-size: 40px;
+  font-weight: 400;
+  padding-bottom: 48px;
+  text-transform: none;
+
+  > span {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 50%,
+      $color-saffron 50%
+    );
+  }
+}
+
+.skillsContainer {
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  width: 996px; // 1000px - 4px
+}
+
+.skillBox {
+  align-items: center;
+  border: 4px solid;
+  border-color: $color-saffron;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 42px;
+  position: absolute;
+  transition: border-color 200ms ease, background-color 200ms ease,
+    color 200ms ease;
+
+  > h3 {
+    background-color: $color-saffron;
+    border-radius: 4px;
+    font-family: monospace;
+    font-weight: 500;
+    padding: 4px;
+    position: absolute;
+    text-transform: lowercase;
+  }
+}
+
+.professional {
+  align-items: flex-start;
+  height: 600px;
+  justify-content: flex-start;
+  left: 0;
+  top: 0;
+  width: 600px;
+
+  .row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .col {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-evenly;
+  }
+
+  > h3 {
+    left: 2px;
+    top: -31px;
+  }
+
+  &:hover {
+    border-color: $color-green-blue-crayola;
+
+    > h3 {
+      background-color: $color-green-blue-crayola;
+      color: white;
+    }
+  }
+}
+
+.intersection {
+  border-style: dashed;
+  height: 400px;
+  justify-content: space-around;
+  left: 200px;
+  padding: 18px;
+  top: 174px;
+  width: 400px;
+
+  > h3 {
+    bottom: 2px;
+    left: 2px;
+  }
+
+  &:hover {
+    border-color: $color-cerise;
+
+    > h3 {
+      background-color: $color-cerise;
+      color: white;
+    }
+  }
+}
+
+.personal {
+  border-left-color: transparent;
+  height: 400px;
+  justify-content: space-around;
+  left: calc(600px - 4px);
+  padding: 18px;
+  top: 174px;
+  width: 400px;
+
+  > h3 {
+    right: 2px;
+    top: -31px;
+  }
+
+  &:hover {
+    border-color: $color-green-blue-crayola;
+
+    > h3 {
+      background-color: $color-green-blue-crayola;
+      color: white;
+    }
+  }
+}
