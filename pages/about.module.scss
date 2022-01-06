@@ -93,6 +93,41 @@
       background-color: $color-green-blue-crayola;
       color: white;
     }
+
+    + .intersection {
+      border-right-style: solid;
+      border-right-color: $color-green-blue-crayola;
+    }
+  }
+}
+
+.personal {
+  border-left-color: transparent;
+  height: 400px;
+  justify-content: space-around;
+  left: calc(600px - 4px);
+  padding: 18px;
+  top: 174px;
+  width: 400px;
+
+  > h3 {
+    right: 2px;
+    top: -31px;
+  }
+
+  &:hover {
+    border-color: $color-green-blue-crayola;
+    border-left-color: transparent;
+
+    > h3 {
+      background-color: $color-green-blue-crayola;
+      color: white;
+    }
+
+    + .intersection {
+      border-color: $color-green-blue-crayola;
+      border-right-color: transparent;
+    }
   }
 }
 
@@ -115,30 +150,6 @@
 
     > h3 {
       background-color: $color-cerise;
-      color: white;
-    }
-  }
-}
-
-.personal {
-  border-left-color: transparent;
-  height: 400px;
-  justify-content: space-around;
-  left: calc(600px - 4px);
-  padding: 18px;
-  top: 174px;
-  width: 400px;
-
-  > h3 {
-    right: 2px;
-    top: -31px;
-  }
-
-  &:hover {
-    border-color: $color-green-blue-crayola;
-
-    > h3 {
-      background-color: $color-green-blue-crayola;
       color: white;
     }
   }
